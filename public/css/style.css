@@ -1,0 +1,23 @@
+header {
+	background-color: #1B5165;
+	color: white;
+	margin-bottom: 1em;
+}
+header a {
+	color: white;
+}
+.title {
+	border-bottom: 1px solid rgba(215, 215, 215, .7);
+	margin-bottom: 1em;
+}
+
+h2 {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #EAEAEA;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.2125em; 
+}
