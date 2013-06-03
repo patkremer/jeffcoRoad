@@ -108,16 +108,11 @@
 
 			<hr>
 
-			<h3>What does this mean?</h3>
+			<h3>We ran into a little problem!</h3>
 
 			<p>
 				Something went wrong on our servers while we were processing your request.
-				We're really sorry about this, and will work hard to get this resolved as
-				soon as possible.
-			</p>
-
-			<p>
-				Perhaps you would like to go to our <?php echo HTML::link('/', 'home page'); ?>?
+				Try refreshing your browser or go to our <?php echo HTML::link('/', 'home page'); ?> and try again.
 			</p>
 		</div>
 	</div>

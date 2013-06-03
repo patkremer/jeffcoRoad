@@ -10,9 +10,13 @@
 	
 	{{ HTML::style('css/normalize.css') }}
 	{{ HTML::style('css/foundation.css') }}
+	{{ HTML::style('font-awesome/css/font-awesome.min.css') }}
 	{{ HTML::style('css/style.css') }}
 	{{ HTML::script('js/vendor/custom.modernizr.js') }}
-
+	
+	<!--[if IE 7]>
+ 		{{ HTML::style('font-awesome/css/font-awesome-ie7.min.css') }}
+	<![endif]-->
 </head>
 <body>
 	<header>
@@ -25,6 +29,15 @@
 
 	<div class="content">
 		<div class="row">
+			<div class="small-8 large-8 small-centered columns">	
+				
+				@if(Session::has('error'))
+					<div data-alert class="alert-box alert">
+						<p class="text-center">{{ Session::get('error') }}</p>
+						<a href="#" class="close">&times;</a>
+					</div>
+				@endif
+			</div>
 			@yield('content') 
 		</div>	
 	</div>
@@ -38,7 +51,8 @@
 		</div>
 	</footer>
 	{{ HTML::script('js/vendor/jquery.js') }}
-	{{ HTML::script('js/vendor/zepto.js') }}	    
+	{{ HTML::script('js/vendor/zepto.js') }}	
+	
 	{{ HTML::script('js/foundation.min.js') }}
 	{{ HTML::script('js/foundation/foundation.alerts.js') }}
 	{{ HTML::script('js/foundation/foundation.forms.js') }}

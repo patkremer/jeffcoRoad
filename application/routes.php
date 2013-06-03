@@ -36,7 +36,7 @@
 
 
 Route::get('/', array('as' => '/', 'uses' => 'roads@index'));
-Route::get('roads/(:all)', array('uses' => 'roads@roads'));
+Route::get('roads/(:all)', array('as' => 'roads',  'uses' => 'roads@roads'));
 Route::get('about', array('as' => 'about', 'uses' => 'roads@about'));
 Route::post('search', array('uses' => 'roads@search'));
 

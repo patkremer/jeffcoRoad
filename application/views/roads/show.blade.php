@@ -1,29 +1,11 @@
 @layout('layouts.master')
 
 @section('content')
-	<h4 class="title">Enter another street to find out the road number!</h4>
-	<div class="large-8 large-centered columns">
-		<div class="row">
-			<div class="large-10 columns">
-				<div class="row collapse">
-					<div class="small-2 columns">
-						<span class="prefix radius">Street Input</span>
-					</div>
-					<div class="small-8 columns">
-						{{ Form::open('search', 'POST')  }}
-							
-							{{ Form::text('keyword', '', array('id' => 'keyword', 'placeholder' => 'Try coors or quaker for example...', 'required' => 'required')) }}
-					</div>
-					<div class="small-2 columns">
-							{{ Form::submit("Find", array('class' => 'button success prefix')) }}
-						{{ Form::close() }}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	{{ render('partials.errors') }}
+	@include('partials.search')
+
     <div class="row">
-		<div class="large-12 columns">
+		<div class="small-12 large-8 small-centered large-centered columns">
 			<table>
 				<thead>
 				    <tr>
